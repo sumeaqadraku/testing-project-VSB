@@ -1,14 +1,15 @@
-// PERSONA 3 — System Tests: Payment flow + skenarë negativ
-import { test, expect } from './fixtures/base-fixture';
+// PERSONA 3 — System Tests (Playwright E2E skeleton)
 
-test.describe('Pagesat (Payment UI)', () => {
-  test.todo('Client paguan plotësisht — Booking bëhet Completed');
-  test.todo('Client paguan pjesërisht — Booking mbetet aktiv, balance e re shfaqet');
-  test.todo('Pagesë e dytë plotëson — mbyllje automatike');
+import { test, expect } from '@playwright/test';
+
+test.describe('Payment Flow (E2E)', () => {
+  test.todo('Client completes full payment → Booking becomes Completed');
+  test.todo('Partial payment → Booking remains active, balance updated');
+  test.todo('Second payment completes remaining balance → auto close');
 });
 
-test.describe('Skenarë Negativ', () => {
-  test.todo('Client tenton /manager route — ridrejtohet (akses i mohuar)');
-  test.todo('Client tenton pagesë mbi balancë — mesazh gabimi specifik');
-  test.todo('Pagesë pa Invoice — mesazh "Fatura nuk ekziston"');
+test.describe('Negative Scenarios', () => {
+  test.todo('Client accesses /manager → redirected (forbidden)');
+  test.todo('Payment exceeds balance → specific error message');
+  test.todo('Payment without invoice → "Invoice does not exist" error');
 });
